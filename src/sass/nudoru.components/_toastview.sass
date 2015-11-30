@@ -1,0 +1,73 @@
+#toast__container
+  position: fixed
+  top: $base-line-height
+  right: $double-base-line-height
+  z-index: $z-index-toast-container
+
+.toast__item
+  +shadow__one-edge-faint
+  margin-bottom: $control-margin
+  padding: 0
+  border: $control-border
+  border-radius: $control-border-radius
+  background-color: #fff
+  display: table
+  position: absolute
+  top: 0
+  right: 0
+  width: 300px
+  overflow: hidden
+
+.toast__item-content, .toast__item-controls
+  padding: $base-line-height
+  display: table-cell
+  vertical-align: middle
+  text-align: left
+
+.toast__item-content
+  float: left
+  width: 240px
+  h1, p
+    padding: 0
+    margin: 0
+    line-height: $double-base-line-height
+    color: $control-primary-color-dark
+  h1
+    @extend %emphasis-title
+    font-size: 0.8rem
+    margin-bottom: $half-base-line-height
+    color: $dark-warm-grey
+    font-family: $font-content
+
+.toast__item-controls
+  width: 55px
+  background-color: rgba(0,0,0,.05)
+  border-left: 1px solid rgba(0,0,0,.1)
+  text-align: center
+  button
+    @extend .button-round
+    @extend .button-neutral-light
+
+=toast-variation($color)
+  background-color: $color
+  .toast__item-content
+    h1, p
+      color: #fff
+      +control-emboss-shadow
+  .toast__item-controls
+    background-color: rgba(255, 255, 255,.1)
+    border-left: 1px solid rgba(255, 255, 255,.2)
+    button
+      @extend .button-neutral-light-negative
+
+.toast__information
+  +toast-variation($control-primary-color)
+
+.toast__success
+  +toast-variation($control-success-color-dark)
+
+.toast__warning
+  +toast-variation($control-warning-color-dark)
+
+.toast__danger
+  +toast-variation($control-danger-color)
