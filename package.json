@@ -10,10 +10,34 @@
     "type": "git",
     "url": "git+https://github.com/nudoru/React-Starter.git"
   },
-  "author": "",
+  "author": "Matt Perkins",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nudoru/React-Starter/issues"
   },
-  "homepage": "https://github.com/nudoru/React-Starter#readme"
+  "homepage": "https://github.com/nudoru/React-Starter#readme",
+  "devDependencies": {
+    "del": "^2.0.0",
+    "gulp": "^3.9.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.4.0",
+    "jshint": "latest",
+    "jshint-stylish": "^2.0.1",
+    "run-sequence": "^1.1.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "lint": "jshint src/scripts/nori/",
+    "build": "gulp default",
+    "test": "mocha test/"
+  }
 }
