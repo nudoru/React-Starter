@@ -14,19 +14,20 @@ module.exports = {
     // Review docs https://github.com/webpack/css-loader
     // https://github.com/jtangelder/sass-loader
     // Autoprefixer browser list https://github.com/ai/browserslist
-    //preLoaders: [
-    //  {
-    //    test: /\.js$/, // include .js files
-    //    exclude: /node_modules/, // exclude any and all files in the node_modules folder
-    //    loader: "jshint-loader"
-    //  }
-    //],
+    preLoaders: [
+      {
+        test: /\.js$/,
+        loader: "eslint-loader",
+        exclude: /node_modules/
+      }
+    ],
     loaders: [
       {
         test   : /\.js$/,
         exclude: /node_modules/,
         loaders: ["react-hot", "babel-loader"]
       },
+
       {
         test  : /\.html$/,
         loader: "file?name=[name].[ext]"
@@ -52,32 +53,10 @@ module.exports = {
       }
     ]
   },
-  jshint: {
-    // any jshint option http://www.jshint.com/docs/options/
-    // i. e.
-    camelcase: true,
-    curly: true,
-    eqeqeq: true,
-    freeze: true,
-    esnext: true,
-    eqnull: true,
-    browser: true,
-    undef: true,
-    unused: true,
-    maxdepth: '4',
-    maxcomplexity: '30',
-    maxparams: '4',
-    "-W014": true,
-    "-W030": true,
-    "-W061": true,
-    "-W069": true,
-    "-W083": true,
-    // jshint errors are displayed by default as warnings
-    // set emitErrors to true to display them as errors
-    emitErrors: false,
-    // jshint to not interrupt the compilation
-    // if you want any file with jshint errors to fail
-    // set failOnHint to true
-    failOnHint: false
+  eslint: {
+    configFile: './.eslintrc',
+    quiet: false,
+    failOnWarning: false,
+    failOnError: false
   }
 };
