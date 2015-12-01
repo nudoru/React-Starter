@@ -46,6 +46,7 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
+    "compass-mixins": "^0.12.7",
     "react": "^0.14.3",
     "react-redux": "^4.0.0",
     "redux": "^3.0.4"
