@@ -30,7 +30,7 @@ module.exports = {
       },
       {
         test: /\.sass$/,
-        loader: "style-loader!raw-loader!sass-loader?includePaths[]=" + path.resolve(__dirname, "./node_modules/compass-mixins/lib") + "&includePaths[]=" + path.resolve(__dirname, "./mixins/app_mixins")
+        loaders: ["style", "css", "sass"]
       },
       {
         test: /\.scss$/,
@@ -59,6 +59,18 @@ module.exports = {
       }
 
     ]
+  },
+  sassLoader: {
+    //https://github.com/sass/node-sass
+    indentedSyntax: true,
+    includePaths: [path.resolve(__dirname, "./src/sass/base"),
+      path.resolve(__dirname, "./src/sass/components"),
+      path.resolve(__dirname, "./src/sass/forms"),
+      path.resolve(__dirname, "./src/sass/layout"),
+      path.resolve(__dirname, "./src/sass/pages"),
+      path.resolve(__dirname, "./src/sass/themes"),
+      path.resolve(__dirname, "./src/sass/utils"),
+      path.resolve(__dirname, "./src/sass/vendor")]
   },
   'uglify-loader': {
     mangle: false
