@@ -12,7 +12,12 @@
   font-size: 0.8rem
   color: #fff
   &:active
+    border: 1px solid rgba(0,0,0,.25)
+    box-shadow: inset 0 0 5px hsla(0, 0%, 0%, .5)
     background-color: $control-primary-color-dark
+  &:hover, &:focus
+    box-shadow: inset 0 0 5px hsla(0, 0%, 0%, .25)
+    border: 1px solid rgba(0,0,0,.5)
 
 .nuButton__icon-left
   padding-left: $base-line-height

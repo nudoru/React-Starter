@@ -1,6 +1,6 @@
 import React from "react";
 
-var css1 = require('!style!css!sass!../../sass/base/_all.sass');
+require('!style!css!sass!../../../sass/base/_all.sass');
 
 export default React.createClass({
   render: function() {

@@ -1,4 +1,6 @@
 @import "../utils/variables"
+@import "application-common"
+@import "../forms/buttons"
 
 .app__header
   display: block
@@ -7,7 +9,6 @@
   overflow: hidden
   background: #fff
   color: $dark-blue
-  border-bottom: 1px solid $color-white-grey-line
   h1
     @extend .app__padded-content
     margin: 0
@@ -30,7 +31,6 @@
   top: 0
   right: 0
   button
-    @extend .icon-left
     @extend .nuButton-neutral-light
     float: left
     margin: 0
@@ -39,9 +39,12 @@
     border: none
     border-bottom: 5px solid transparent
     color: $light-blue
-    &:hover
+    &:hover, &:focus
       color: $dark-blue
+      border: none
       border-bottom: 5px solid $light-blue
+      box-shadow: none
     &:active
       border: none
       border-bottom: 5px solid $dark-blue
+      box-shadow: none
