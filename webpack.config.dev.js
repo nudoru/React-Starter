@@ -1,4 +1,5 @@
-var path = require("path");
+var path = require("path"),
+    CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   context: __dirname + "/src",
@@ -10,6 +11,11 @@ module.exports = {
     filename: "./assets/scripts/app.js",
     path    : "./dist"
   },
+  plugins: [
+    new CopyWebpackPlugin([
+      {from:'config.json'}
+    ])
+  ],
   module : {
     // TODO:
     // Generating errors https://github.com/bestander/uglify-loader
