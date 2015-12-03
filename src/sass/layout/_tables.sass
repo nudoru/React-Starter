@@ -1,4 +1,9 @@
-.table
+@import "../utils/variables"
+@import "../utils/variables-controls"
+@import "../utils/shadows"
+@import "../utils/css-animation"
+
+.nuTable
   margin: 0
   margin-bottom: $base-line-height
   padding: 0
@@ -11,7 +16,6 @@
     @extend %legend
 
   th, td
-    @extend %control-text-base
     display: table-cell
     padding: $table-cell-padding
     border: none
@@ -38,7 +42,6 @@
     .th-selected
       color: #fff
       background-color: $control-primary-color
-      //border-radius: $control-border-radius-large $control-border-radius-large 0 0
       +letter_press
       i.fa
         color: #fff
@@ -102,14 +105,14 @@
     background-color: $control-danger-color
     color: #fff
 
-.table-rows-zebra
+.nuTable-rows-zebra
   tbody
     th, td
       border-bottom: none
     tr:nth-child(odd)
       background-color: hsla(0, 0%, 0%, .03)
 
-.table-cols-zebra
+.nuTable-cols-zebra
   tbody
     tr
       border-bottom: none

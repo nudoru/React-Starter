@@ -1,3 +1,5 @@
+@import "../vendor/material-colors"
+
 //------------------------------------------------------------------------------
 //  Typography and uniform spacing
 //------------------------------------------------------------------------------
@@ -72,7 +74,7 @@ $color-link-visited: scale-lightness($dark-blue, -25%)
 $color-shaded: scale-lightness($color-base-light, 85%)
 $color-white-grey-fill: scale-lightness($color-base-light, 95%)
 $color-white-grey-line: scale-lightness($color-base-light, 80%)
-$color-pop: $dark-orange
+$color-pop: $clr-orange-600
 
 //------------------------------------------------------------------------------
 //  Other measures
@@ -111,6 +113,7 @@ $control-margin: $base-line-height
 $control-card-margin: $double-base-line-height
 $table-cell-padding: $base-line-height
 $control-form-element-height: 38px
+$grid-padding: $double-base-line-height
 $control-border: 1px solid $color-white-grey-line
 $control-border-dark: 1px solid $light-warm-grey
 $control-border-radius: 5px
@@ -149,3 +152,12 @@ $control-table-zebra-color: hsla(0, 0%, 0%, .03)
 $control-font-text-shadow: 0 1px 0 rgba(0,0,0,.25)
 $control-font-neg-text-shadow: 0 1px 0 rgba(0,0,0,.45)
 $control-shadow: 0 5px 5px -4px rgba(0,0,0,.25)
+
+//------------------------------------------------------------------------------
+//  Application specific
+//------------------------------------------------------------------------------
+
+$z-index-initialization: 1100
+$app-column-width: 100%
+$app-header-height: 65px
+$app-drawer-width: 0px
