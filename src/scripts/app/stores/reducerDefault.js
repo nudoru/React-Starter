@@ -8,7 +8,13 @@ export default (state, action) => {
     return DefaultState;
   }
 
+  //console.log('reducer',action);
+
   switch (action.type) {
+    case ActionConstants.CONFIG_LOADED:
+      return Object.assign({}, state, {configLoaded: true});
+    case ActionConstants.SET_CONFIG:
+      return Object.assign({}, state, {config: action.payload});
     default:
       return state;
   }
