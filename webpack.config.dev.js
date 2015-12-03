@@ -1,7 +1,5 @@
 var path = require("path");
 
-console.log('DEV');
-
 module.exports = {
   context: __dirname + "/src",
   entry  : {
@@ -27,12 +25,6 @@ module.exports = {
     ],
     loaders: [
       {
-        test   : /\.js$/,
-        exclude: /node_modules/,
-        loaders: ["react-hot", "babel-loader"]
-      },
-
-      {
         test  : /\.html$/,
         loader: "file?name=[name].[ext]"
       },
@@ -54,8 +46,22 @@ module.exports = {
           'file?hash=sha512&digest=hex&name=[hash].[ext]',
           'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
+      },
+      {
+        // TODO add nudoru
+        test: /.*\/app\/.*\.js$/,
+        loader: "uglify"
+      },
+      {
+        test   : /\.js$/,
+        exclude: /node_modules/,
+        loaders: ["react-hot", "babel-loader"]
       }
+
     ]
+  },
+  'uglify-loader': {
+    mangle: false
   },
   eslint: {
     configFile: './.eslintrc',
