@@ -31,6 +31,7 @@
     "eslint": "^1.10.2",
     "eslint-loader": "^1.1.1",
     "eslint-plugin-react": "^3.11.2",
+    "expect": "^1.13.0",
     "file-loader": "^0.8.5",
     "image-webpack-loader": "^1.6.2",
     "jade": "^1.11.0",
@@ -49,6 +50,9 @@
   },
   "dependencies": {
     "history": "^1.13.1",
+    "immutable": "^3.7.5",
+    "lodash": "^3.10.1",
+    "moment": "^2.10.6",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-loader": "^2.0.0",
