@@ -1,43 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Greeting from './components/greeting';
-import Header from './components/header';
 import AppStore from './stores/appStore';
-import LoadConfig from './service/JSONLoader.js';
+
 import Actions from './actions/actionCreators.js';
+import ApplicationView from './components/application.js';
 
-require('!style!css!sass!../../sass/pages/_application.sass');
-require('!style!css!sass!../../sass/layout/_header.sass');
-require('!style!css!sass!../../sass/layout/_content.sass');
+import LoadConfig from './service/JSONLoader.js';
 
-let _applicationTitle = AppStore.getState().title;
+const configurationFileName = 'config.json';
 
 // For testing
 AppStore.subscribe(() => {
   console.log('Store updated', AppStore.getState());
 });
 
-// Load local config JSON
-LoadConfig.onSuccess((data) => {
+
+const onLoadSuccess = (data) => {
   console.log('success!', data);
   AppStore.dispatch(Actions.configLoaded());
   AppStore.dispatch(Actions.setConfig(data));
-});
-LoadConfig.onError((err) => console.log('error!', err));
-LoadConfig.load('config.json');
+  //ReactDOM.render(<ApplicationView/>, document.querySelector('#application'));
+};
 
-ReactDOM.render(
-  <div id="app__container">
-    <div id="app__contents">
-      <Header title={_applicationTitle}/>
-      <section className="app__content">
-        <div className="app__padded-content">
-          <section id="contents">
-            <Greeting name="World"/>
-          </section>
-        </div>
-      </section>
-    </div>
-  </div>,
-  document.querySelector('#application')
-);
+const onLoadError = (err) => {
+  throw new Error('Could not load configuration data. Aborting with error ',err);
+};
+
+// Load local config JSON
+LoadConfig.onSuccess(onLoadSuccess);
+LoadConfig.onError(onLoadError);
+LoadConfig.load(configurationFileName);
