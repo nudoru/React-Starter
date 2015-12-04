@@ -4,6 +4,12 @@ import HeaderNavButton from './headerNavButton.js'
 require('!style!css!sass!../../../sass/layout/_header.sass');
 
 export default React.createClass({
+
+  propTypes: {
+    title: React.PropTypes.string,
+    navigation: React.PropTypes.array
+  },
+
   render: function() {
     return (
       <header className="app__header">
