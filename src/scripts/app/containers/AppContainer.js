@@ -1,10 +1,10 @@
 import React from 'react';
-import AppStore from '../stores/appStore';
+import AppStore from '../stores/AppStore';
 import Actions from '../actions/actionCreators.js';
 
-import ApplicationLoadingView from '../components/applicationLoading.js';
-import ApplicationLoadingErrorView from '../components/applicationLoadingError.js';
-import ApplicationScaffoldView from '../components/applicationScaffold.js';
+import ApplicationLoadingView from '../components/AppLoading.js';
+import ApplicationLoadingErrorView from '../components/AppLoadingError.js';
+import ApplicationScaffoldView from '../components/AppScaffold.js';
 
 import JSONLoader from '../service/JSONLoader.js';
 

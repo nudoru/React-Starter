@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppStore from '../stores/appStore';
+import AppStore from '../stores/AppStore';
 
 // App views
-import Greeting from '../components/greeting';
-import Header from '../components/header';
+import Greeting from './Greeting';
+import Header from './AppHeader';
 
 // Scaffold styles
 require('!style!css!sass!../../../sass/pages/_application.sass');

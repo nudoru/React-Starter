@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderNavButton from './headerNavButton.js'
+import HeaderNavButton from './AppHeaderButton.js'
 
 require('!style!css!sass!../../../sass/layout/_header.sass');
 
