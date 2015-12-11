@@ -15,8 +15,8 @@ let _storeState = AppStore.getState(),
     _applicationTitle = _storeState.title,
     _headerNav = _storeState.headerButtons;
 
-export default React.createClass({
-  render: function () {
+export default class AppScaffold extends React.Component {
+  render() {
     return (
       <div id="app__container">
         <div id="app__contents">
@@ -32,4 +32,4 @@ export default React.createClass({
       </div>
     );
   }
-});
+}

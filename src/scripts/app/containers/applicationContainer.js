@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import AppStore from '../stores/appStore';
 import Actions from '../actions/actionCreators.js';
 
@@ -14,22 +13,30 @@ import JSONLoader from '../service/JSONLoader.js';
  * Loads configuration data and displays the final application
  */
 
-export default React.createClass({
+export default class AppContainer extends React.Component {
 
   // We're loading the config data with no errors to start
-  getInitialState() {
-    return {loading: true, isError: false};
-  },
+  constructor() {
+    super();
+    this.state = {loading: true, isError: false};
+  }
 
   // Start loading the data
   componentDidMount() {
-    JSONLoader.onSuccess((data) => {
-      AppStore.dispatch(Actions.setConfig(data));
-      this.setState({loading: false})
-    });
-    JSONLoader.onError(() => this.setState({loading: false, isError: true}));
-    JSONLoader.load(this.props.config);
-  },
+    let {config} = this.props;
+
+    if (!config) {
+      AppStore.dispatch(Actions.setConfig(null));
+      this.setState({loading: false});
+    } else {
+      JSONLoader.onSuccess((data) => {
+        AppStore.dispatch(Actions.setConfig(data));
+        this.setState({loading: false})
+      });
+      JSONLoader.onError(() => this.setState({loading: false, isError: true}));
+      JSONLoader.load(config);
+    }
+  }
 
   // Render the application view depending on loading/error or data loaded
   render() {
@@ -42,4 +49,4 @@ export default React.createClass({
     }
   }
 
-});
+}
