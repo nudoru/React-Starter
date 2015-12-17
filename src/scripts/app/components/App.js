@@ -12,7 +12,7 @@ let _storeState       = AppStore.getState(),
     _applicationTitle = _storeState.title,
     _headerNav        = _storeState.headerButtons;
 
-export default class AppScaffold extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <div id="app__container">
