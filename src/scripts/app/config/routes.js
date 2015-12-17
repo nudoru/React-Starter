@@ -1,7 +1,7 @@
 import React from 'react';
 import {Router, Route, IndexRoute} from 'react-router';
 
-import AppScaffold from '../components/AppScaffold'
+import App from '../components/App'
 import { RouteOne, RouteTwo, RouteThree} from '../components/TestRoutes';
 
 // Refer to route configuration docs
@@ -9,7 +9,7 @@ import { RouteOne, RouteTwo, RouteThree} from '../components/TestRoutes';
 
 const routes = () => (
   <Router>
-    <Route name="default" path="/" component={AppScaffold}>
+    <Route name="default" path="/" component={App}>
       <IndexRoute component={RouteOne}/>
       <Route name="two" path="two" component={RouteTwo}/>
       <Route name="three" path="three" component={RouteThree}/>

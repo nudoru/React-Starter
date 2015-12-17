@@ -7,7 +7,6 @@ import AppStore from '../stores/AppStore';
 import Greeting from './Greeting';
 import Header from './AppHeader';
 
-// Scaffold styles
 require('!style!css!sass!../../../sass/pages/_application.sass');
 require('!style!css!sass!../../../sass/layout/_content.sass');
 
