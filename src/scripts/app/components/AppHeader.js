@@ -3,13 +3,15 @@ import {Link} from "react-router"
 
 require('!style!css!sass!../../../sass/layout/_header.sass');
 
+// Handler for button click
 const onButtonPress = (e) => {
   console.log('press',e.target.textContent.toLowerCase());
 };
 
+// Button component
 const NavButton = ({label}) => <Link to={label.toLowerCase()}><button onClick={onButtonPress}>{label}</button></Link>;
 
-
+// Header bar
 export default class AppHeader extends React.Component {
   render() {
     return (
