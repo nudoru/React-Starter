@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import AppStore from '../stores/AppStore';
 
 // App views
@@ -8,12 +9,12 @@ import Header from './AppHeader';
 
 // Scaffold styles
 require('!style!css!sass!../../../sass/pages/_application.sass');
-require('!style!css!sass!../../../sass/layout/_header.sass');
 require('!style!css!sass!../../../sass/layout/_content.sass');
 
-let _storeState = AppStore.getState(),
+let _storeState       = AppStore.getState(),
     _applicationTitle = _storeState.title,
-    _headerNav = _storeState.headerButtons;
+    _headerNav        = _storeState.headerButtons;
+
 
 export default class AppScaffold extends React.Component {
   render() {
@@ -24,7 +25,7 @@ export default class AppScaffold extends React.Component {
           <section className="app__content">
             <div className="app__padded-content">
               <section id="contents">
-                <Greeting name="World"/>
+                {this.props.children}
               </section>
             </div>
           </section>
