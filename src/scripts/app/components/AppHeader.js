@@ -1,15 +1,17 @@
 import React from "react";
 import {Link} from "react-router"
 
+import history from '../config/history'
+
 require('!style!css!sass!../../../sass/layout/_header.sass');
 
 // Handler for button click
 const onButtonPress = (e) => {
-  console.log('press',e.target.textContent.toLowerCase());
+  history.push(e.target.textContent.toLowerCase());
 };
 
 // Button component
-const NavButton = ({label}) => <Link to={label.toLowerCase()}><button onClick={onButtonPress}>{label}</button></Link>;
+const NavButton = ({label}) => <button onClick={onButtonPress}>{label}</button>;
 
 // Header bar
 export default class AppHeader extends React.Component {

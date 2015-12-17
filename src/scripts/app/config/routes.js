@@ -1,6 +1,7 @@
 import React from 'react';
 import {Router, Route, IndexRoute} from 'react-router';
 
+import history from './history'
 import App from '../components/App'
 import Index from '../components/Index'
 
@@ -10,7 +11,7 @@ import { RouteOne, RouteTwo, RouteThree} from '../components/TestRoutes';
 // Refer to route configuration docs
 // https://github.com/rackt/react-router/blob/latest/docs/guides/basics/RouteConfiguration.md
 const routes = () => (
-  <Router>
+  <Router history={history}>
     <Route name="default" path="/" component={App}>
       <IndexRoute component={Index}/>
       <Route path="one" component={RouteOne}/>
