@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 
 import AppStore from '../stores/AppStore';
 
-// App views
-import Greeting from './Greeting';
 import Header from './AppHeader';
 
 require('!style!css!sass!../../../sass/pages/_application.sass');
@@ -13,7 +11,6 @@ require('!style!css!sass!../../../sass/layout/_content.sass');
 let _storeState       = AppStore.getState(),
     _applicationTitle = _storeState.title,
     _headerNav        = _storeState.headerButtons;
-
 
 export default class AppScaffold extends React.Component {
   render() {
