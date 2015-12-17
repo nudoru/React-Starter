@@ -2,18 +2,21 @@ import React from 'react';
 import {Router, Route, IndexRoute} from 'react-router';
 
 import App from '../components/App'
+import Index from '../components/Index'
+
+// Just for tests
 import { RouteOne, RouteTwo, RouteThree} from '../components/TestRoutes';
 
 // Refer to route configuration docs
 // https://github.com/rackt/react-router/blob/latest/docs/guides/basics/RouteConfiguration.md
-
 const routes = () => (
   <Router>
     <Route name="default" path="/" component={App}>
-      <IndexRoute component={RouteOne}/>
-      <Route name="two" path="two" component={RouteTwo}/>
-      <Route name="three" path="three" component={RouteThree}/>
-      <Route name="nomatch" path="*" component={RouteOne}/>
+      <IndexRoute component={Index}/>
+      <Route path="one" component={RouteOne}/>
+      <Route path="two" component={RouteTwo}/>
+      <Route path="three" component={RouteThree}/>
+      <Route path="*" component={Index}/>
     </Route>
   </Router>
 );

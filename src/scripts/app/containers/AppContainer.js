@@ -49,7 +49,7 @@ export default class AppContainer extends React.Component {
       return <ApplicationLoadingErrorView/>;
     }
 
-    // AppScaffold component will wrap the content from the components attached
+    // App component will wrap the content from the components attached
     // at the route endpoints
     return Routes();
   }
