@@ -4,7 +4,7 @@ var path = require("path"),
 module.exports = {
   context: __dirname + "/src",
   entry  : {
-    javascript: "./scripts/app/app.js",
+    javascript: "./scripts/app/App.js",
     html      : "./index.html"
   },
   output : {
