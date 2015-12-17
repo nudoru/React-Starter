@@ -15,3 +15,5 @@ WebPack is configured for:
 By default, the App will load the config.js file on start up. This external config file may be updated outside of the bundle to set configuration options for the application. 
 
 My Nudoru utility classes are included in the src/scripts/nudoru folder. Some utils developed for Nori are in the src/scripts/nori folder. 
+
+The RxJS module is included also for reactive programming.

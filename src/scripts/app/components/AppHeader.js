@@ -1,22 +1,27 @@
 import React from "react";
-import HeaderNavButton from './AppHeaderButton.js'
+import {Link} from "react-router"
 
 require('!style!css!sass!../../../sass/layout/_header.sass');
 
-export default class AppHeader extends React.Component {
+const onButtonPress = (e) => {
+  console.log('press',e.target.textContent.toLowerCase());
+};
 
+const NavButton = ({label}) => <Link to={label.toLowerCase()}><button onClick={onButtonPress}>{label}</button></Link>;
+
+
+export default class AppHeader extends React.Component {
   render() {
     return (
       <header className="app__header">
         <h1>{this.props.title}</h1>
         <nav className="app__header-nav">
-          {this.props.navigation.map((c, i) => <HeaderNavButton key={i}
+          {this.props.navigation.map((c, i) => <NavButton key={i}
                                                                 label={c}/>)}
         </nav>
       </header>
     );
   }
-
 }
 
 AppHeader.propTypes = {
