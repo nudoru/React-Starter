@@ -1,3 +1,7 @@
+/*
+Index or default app view
+ */
+
 import React from 'react';
 
 export default class Index extends React.Component {

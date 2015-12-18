@@ -1,19 +1,17 @@
-import React from 'react';
-import AppStore from '../stores/AppStore';
-import Actions from '../actions/actionCreators.js';
-
-import ApplicationLoadingView from '../components/AppLoading.js';
-import ApplicationLoadingErrorView from '../components/AppLoadingError.js';
-import Routes from '../config/routes';
-
-import JSONLoader from '../service/JSONLoader.js';
-
 /**
  * Application container
  * Loads configuration data and displays the final application
  * An external JSON file is used to provide set up data to the app outside of
  * the bundle file. Allows for configuration post build
  */
+
+import React from 'react';
+import AppStore from '../stores/AppStore';
+import Actions from '../actions/actionCreators.js';
+import ApplicationLoadingView from '../components/AppLoading.js';
+import ApplicationLoadingErrorView from '../components/AppLoadingError.js';
+import Routes from '../config/routes';
+import JSONLoader from '../service/JSONLoader.js';
 
 export default class AppContainer extends React.Component {
 

@@ -1,3 +1,7 @@
+/*
+Basic routes to test the router functionality
+ */
+
 import React from 'react';
 
 export const RouteOne = React.createClass({

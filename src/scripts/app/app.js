@@ -4,7 +4,7 @@ import AppStore from './stores/AppStore';
 import Actions from './actions/actionCreators.js';
 import ApplicationContainer from './containers/AppContainer.js';
 
-// For testing
+// Log state changes for testing
 AppStore.subscribe(() => {
   console.log('Store updated', AppStore.getState());
 });

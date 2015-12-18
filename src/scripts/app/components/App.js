@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import AppStore from '../stores/AppStore';
-
 import Header from './AppHeader';
 
 require('!style!css!sass!../../../sass/pages/_application.sass');
@@ -12,6 +10,7 @@ let _storeState       = AppStore.getState(),
     _applicationTitle = _storeState.title,
     _headerNav        = _storeState.headerButtons;
 
+// this.props.children in the section#contents will render from the Router
 export default class App extends React.Component {
   render() {
     return (
