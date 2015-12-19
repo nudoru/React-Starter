@@ -4,9 +4,4 @@ import AppStore from './stores/AppStore';
 import Actions from './actions/actionCreators.js';
 import ApplicationContainer from './containers/AppContainer.js';
 
-// Log state changes for testing
-AppStore.subscribe(() => {
-  console.log('Store updated', AppStore.getState());
-});
-
 ReactDOM.render(<ApplicationContainer config="config.json"/>, document.querySelector('#application'));
