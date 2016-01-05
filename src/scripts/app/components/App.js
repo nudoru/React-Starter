@@ -1,5 +1,12 @@
+/*
+Container componet for the application
+Refer to React-redux to bind app to store
+ https://github.com/rackt/react-redux/blob/master/docs/quick-start.md#quick-start
+ */
+
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import { connect } from 'react-redux';
+
 import AppStore from '../stores/AppStore';
 import Header from './AppHeader';
 

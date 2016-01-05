@@ -1,5 +1,5 @@
-import React from "react";
-import {Link} from "react-router"
+import React from 'react';
+import {Link} from 'react-router'
 
 import history from '../config/history'
 
@@ -17,9 +17,9 @@ const NavButton = ({label}) => <button onClick={onButtonPress}>{label}</button>;
 export default class AppHeader extends React.Component {
   render() {
     return (
-      <header className="app__header">
+      <header className='app__header'>
         <h1>{this.props.title}</h1>
-        <nav className="app__header-nav">
+        <nav className='app__header-nav'>
           {this.props.navigation.map((c, i) => <NavButton key={i}
                                                                 label={c}/>)}
         </nav>
