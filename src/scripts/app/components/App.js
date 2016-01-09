@@ -1,5 +1,5 @@
 /*
-Container componet for the application
+Container component for the application
 Refer to React-redux to bind app to store
  https://github.com/rackt/react-redux/blob/master/docs/quick-start.md#quick-start
  */
