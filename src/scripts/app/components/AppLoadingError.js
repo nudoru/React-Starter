@@ -1,6 +1,6 @@
 import React from 'react';
 
-require('!style!css!sass!../../../sass/components/loadingmessage.sass');
+require('!style!css!sass!../../../sass/nudoru/components/loadingmessage.sass');
 
 export default class AppLoadingError extends React.Component {
   render() {

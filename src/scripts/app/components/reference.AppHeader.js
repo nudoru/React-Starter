@@ -1,9 +1,12 @@
+/*
+Just for reference 
+ */
+
 import React from 'react';
-import {Link} from 'react-router'
 
 import history from '../config/history'
 
-require('!style!css!sass!../../../sass/layout/_header.sass');
+require('!style!css!sass!../../../sass/nudoru/layout/_header.sass');
 
 // Handler for button click
 const onButtonPress = (e) => {

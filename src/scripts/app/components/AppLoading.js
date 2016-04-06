@@ -1,7 +1,7 @@
 import React from 'react';
 
-require('!style!css!sass!../../../sass/components/loadingmessage.sass');
-require('!style!css!../../../sass/components/loadingspinner.css');
+require('!style!css!sass!../../../sass/nudoru/components/loadingmessage.sass');
+require('!style!css!../../../sass/nudoru/components/loadingspinner.css');
 
 export default class AppLoading extends React.Component {
   render() {

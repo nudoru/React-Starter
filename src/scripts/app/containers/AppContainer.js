@@ -8,8 +8,8 @@
 import React from 'react';
 import AppStore from '../stores/AppStore';
 import Actions from '../actions/actionCreators.js';
-import ApplicationLoadingView from '../components/AppLoading.js';
-import ApplicationLoadingErrorView from '../components/AppLoadingError.js';
+import AppLoadingView from '../components/AppLoading.js';
+import AppLoadingErrorView from '../components/AppLoadingError.js';
 import Routes from '../config/routes';
 import JSONLoader from '../../nori/service/JSONLoader.js';
 
@@ -42,9 +42,9 @@ export default class AppContainer extends React.Component {
   // Render the application view depending on loading/error or data loaded
   render() {
     if (this.state.loading) {
-      return <ApplicationLoadingView/>;
+      return <AppLoadingView/>;
     } else if (this.state.isError) {
-      return <ApplicationLoadingErrorView/>;
+      return <AppLoadingErrorView/>;
     }
 
     // App component will wrap the content from the components attached
