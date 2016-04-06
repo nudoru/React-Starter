@@ -553,7 +553,7 @@
 	 *
 	 * @param {DOMElement} parentNode Parent node in which to insert.
 	 * @param {DOMElement} childNode Child node to insert.
-	 * @param {number} index Index at which to insert the child.
+	 * @param {number} index Default at which to insert the child.
 	 * @internal
 	 */
 	function insertChildAt(parentNode, childNode, index) {
@@ -5158,7 +5158,7 @@
 	 * Checks if a character in the supplied ID is a separator or the end.
 	 *
 	 * @param {string} id A React DOM ID.
-	 * @param {number} index Index of the character to check.
+	 * @param {number} index Default of the character to check.
 	 * @return {boolean} True if the character is a separator or end of the ID.
 	 * @private
 	 */
@@ -13513,7 +13513,7 @@
 	 * Generate a key string that identifies a component within a set.
 	 *
 	 * @param {*} component A component that could contain a manual key.
-	 * @param {number} index Index that is used if a manual key is not provided.
+	 * @param {number} index Default that is used if a manual key is not provided.
 	 * @return {string}
 	 */
 	function getComponentKey(component, index) {
@@ -14070,7 +14070,7 @@
 	 * Enqueues removing an element at an index.
 	 *
 	 * @param {string} parentID ID of the parent component.
-	 * @param {number} fromIndex Index of the element to remove.
+	 * @param {number} fromIndex Default of the element to remove.
 	 * @private
 	 */
 	function enqueueRemove(parentID, fromIndex) {
@@ -14440,7 +14440,7 @@
 	     *
 	     * @param {ReactComponent} child Component to mount.
 	     * @param {string} name Name of the child.
-	     * @param {number} index Index at which to insert the child.
+	     * @param {number} index Default at which to insert the child.
 	     * @param {ReactReconcileTransaction} transaction
 	     * @private
 	     */

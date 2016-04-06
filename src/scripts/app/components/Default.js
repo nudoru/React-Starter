@@ -9,7 +9,6 @@ export default class Index extends React.Component {
     return (
       <div>
         <h1>Welcome to the app!</h1>
-        <p>This is the index route.</p>
       </div>
     );
   }

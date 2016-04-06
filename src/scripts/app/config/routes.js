@@ -10,7 +10,7 @@ import {Router, Route, IndexRoute} from 'react-router';
 
 import history from './history'
 import App from '../components/App'
-import Index from '../components/Index'
+import Default from '../components/Default'
 
 // Just for testing
 import { RouteOne, RouteTwo, RouteThree} from '../components/TestRoutes';
@@ -18,11 +18,11 @@ import { RouteOne, RouteTwo, RouteThree} from '../components/TestRoutes';
 const routes = () => (
   <Router history={history}>
     <Route name="default" path="/" component={App}>
-      <IndexRoute component={Index}/>
+      <IndexRoute component={Default}/>
       <Route path="one" component={RouteOne}/>
       <Route path="two" component={RouteTwo}/>
       <Route path="three" component={RouteThree}/>
-      <Route path="*" component={Index}/>
+      <Route path="*" component={Default}/>
     </Route>
   </Router>
 );
