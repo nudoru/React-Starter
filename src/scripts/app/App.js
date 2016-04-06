@@ -46,6 +46,9 @@ export default class AppContainer extends React.Component {
   // Render the application view depending on loading/error or data loaded
   render() {
     // If we're in a loading or error state ...
+
+    return <AppLoadingView/>;
+
     if (this.state.loading) {
       return <AppLoadingView/>;
     } else if (this.state.isError) {
