@@ -14,6 +14,9 @@ import Routes from './config/routes';
 import JSONLoader from '../nori/service/JSONLoader.js';
 
 require('!style!css!../../css/vendor/normalize.css');
+require('!style!css!../../css/vendor/skeleton.css');
+require('!style!css!../../css/fonts.css');
+require('!style!css!sass!../../sass/app/app.sass');
 
 export default class AppContainer extends React.Component {
 
