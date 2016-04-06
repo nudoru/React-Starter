@@ -13,6 +13,8 @@ import AppLoadingErrorView from './components/AppLoadingError.js';
 import Routes from './config/routes';
 import JSONLoader from '../nori/service/JSONLoader.js';
 
+require('!style!css!../../css/vendor/normalize.css');
+
 export default class AppContainer extends React.Component {
 
   constructor() {
