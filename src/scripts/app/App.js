@@ -8,7 +8,7 @@
 import React from 'react';
 import AppStore from './stores/AppStore';
 import Actions from './actions/actionCreators.js';
-import AppLoadingView from './components/AppLoading.js';
+import CoverMesage from './components/CoverMessage.js';
 import AppLoadingErrorView from './components/AppLoadingError.js';
 import Routes from './config/routes';
 import JSONLoader from '../nori/service/JSONLoader.js';
@@ -46,13 +46,10 @@ export default class AppContainer extends React.Component {
   // Render the application view depending on loading/error or data loaded
   render() {
     // If we're in a loading or error state ...
-
-    return <AppLoadingView/>;
-
     if (this.state.loading) {
-      return <AppLoadingView/>;
+      return <CoverMesage heading='Please Wait' spinner='true' />;
     } else if (this.state.isError) {
-      return <AppLoadingErrorView/>;
+      return <CoverMesage heading='Problem loading application' />;
     }
 
     // AppShell component will wrap the content from the components attached
