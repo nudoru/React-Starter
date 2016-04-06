@@ -191,7 +191,7 @@ html {
 
 body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: $base-line-height;
+  line-height: $base-line-height*2;
   font-weight: 400;
   font-family: $font-content;
   color: $grey-12;
