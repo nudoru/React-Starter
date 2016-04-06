@@ -48,7 +48,7 @@ export default class AppContainer extends React.Component {
       return <AppLoadingErrorView/>;
     }
 
-    // App component will wrap the content from the components attached
+    // AppShell component will wrap the content from the components attached
     // at the route endpoints
     // Default view is components/Default.js
     return Routes();

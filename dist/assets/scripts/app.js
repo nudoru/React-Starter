@@ -64,7 +64,7 @@
 
 	var _actionCreators2 = _interopRequireDefault(_actionCreators);
 
-	var _AppContainer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./containers/App.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _AppContainer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./containers/AppShell.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	var _AppContainer2 = _interopRequireDefault(_AppContainer);
 

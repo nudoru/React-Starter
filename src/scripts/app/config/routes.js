@@ -9,7 +9,7 @@ import React from 'react';
 import {Router, Route, IndexRoute} from 'react-router';
 
 import history from './history'
-import App from '../components/App'
+import AppShell from '../components/AppShell'
 import Default from '../components/Default'
 
 // Just for testing
@@ -17,7 +17,7 @@ import { RouteOne, RouteTwo, RouteThree} from '../components/TestRoutes';
 
 const routes = () => (
   <Router history={history}>
-    <Route name="default" path="/" component={App}>
+    <Route name="default" path="/" component={AppShell}>
       <IndexRoute component={Default}/>
       <Route path="one" component={RouteOne}/>
       <Route path="two" component={RouteTwo}/>
