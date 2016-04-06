@@ -11,7 +11,7 @@ import Actions from '../actions/actionCreators.js';
 import ApplicationLoadingView from '../components/AppLoading.js';
 import ApplicationLoadingErrorView from '../components/AppLoadingError.js';
 import Routes from '../config/routes';
-import JSONLoader from '../service/JSONLoader.js';
+import JSONLoader from '../../nori/service/JSONLoader.js';
 
 export default class AppContainer extends React.Component {
 
