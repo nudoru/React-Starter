@@ -6,9 +6,7 @@ Refer to React-redux to bind app to store
 
 import React from 'react';
 
-// require('!style!css!sass!../../../sass/pages/_application.sass');
-
-// this.props.children in the section#contents will render from the Router
+// this.props.children in the section#contents will render from config/routes
 export default class App extends React.Component {
   render() {
     return (
