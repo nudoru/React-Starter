@@ -6,12 +6,12 @@
  */
 
 import React from 'react';
-import AppStore from '../stores/AppStore';
-import Actions from '../actions/actionCreators.js';
-import AppLoadingView from '../components/AppLoading.js';
-import AppLoadingErrorView from '../components/AppLoadingError.js';
-import Routes from '../config/routes';
-import JSONLoader from '../../nori/service/JSONLoader.js';
+import AppStore from './stores/AppStore';
+import Actions from './actions/actionCreators.js';
+import AppLoadingView from './components/AppLoading.js';
+import AppLoadingErrorView from './components/AppLoadingError.js';
+import Routes from './config/routes';
+import JSONLoader from '../nori/service/JSONLoader.js';
 
 export default class AppContainer extends React.Component {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ApplicationContainer from './app/containers/AppContainer.js';
+import App from './app/App.js';
 
 // Polyfill for IE11
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
@@ -32,4 +32,4 @@ if (typeof Object.assign !== 'function') {
 require('es6-promise').polyfill();
 
 // Start the app
-ReactDOM.render(<ApplicationContainer config="config.json"/>, document.querySelector('#application'));
+ReactDOM.render(<App config="config.json"/>, document.querySelector('#application'));
