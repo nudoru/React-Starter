@@ -44,9 +44,6 @@ export default class AppContainer extends React.Component {
 
   // Render the application view depending on loading/error or data loaded
   render() {
-    return <CoverMesage heading='Please Wait' spinner='true'/>;
-    
-
     // If we're in a loading or error state ...
     if (this.state.loading) {
       return <CoverMesage heading='Please Wait' spinner='true'/>;
