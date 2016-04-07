@@ -16,7 +16,7 @@ module.exports = {
   output: {
     path      : buildPath,
     filename  : "app.js",
-    publicPath: 'build/'
+    publicPath: '/build/'
   },
 
   module         : {
