@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
-    "build": "webpack --config webpack.config.dev.js -p --progress --profile --colors",
+    "start" : "node server",
+    "dev": "webpack-dev-server --config webpack.config.js --hot --inline --progress --colors",
+    "build": "webpack --config webpack.config.prod.js -p --progress --profile --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
