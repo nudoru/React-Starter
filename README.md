@@ -14,13 +14,15 @@ Includes an Express server with the structure based on http://www.christianalfon
 
 ## Styles
 
-Utilizes a scss tweaked [Skeleton CSS framework](http://getskeleton.com) for basic styling. Entry point for SASS is `app/sass/app/app.sass`.
+A basic application SASS set up in the `app/sass/app` folder. Several includes are provided for branding and variables to be used in the application. 
 
-SASS and CSS are required in the main application JSX file at `app/scripts/app/App.js`.
+A tweaked version of the [Skeleton CSS framework](http://getskeleton.com) is used for basic structure and styling. It has been converted to a SCSS file and uses colors and fonts from the branding include.
+
+Entry point for SASS is `app/sass/app/app.sass`. SASS and CSS are required in the main application JSX file at `app/scripts/app/App.js`.
 
 ## App Entry Point
 
-`index.js` > `App.js` > [Routes] > `AppShell.js` > Current route view
+`index.js` > `App.js` > Routes > `AppShell.js` > Current route view
 
 The entry point for the app is `app/scripts/index.js`. This file sets up a polypill for promise support in IE 11 and then attaches `app/scripts/app/App.js` to the DOM in the `#appliation` div.
 
