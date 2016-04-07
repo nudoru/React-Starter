@@ -16,10 +16,12 @@ export default {
   },
 
   load(filename) {
-    if(!filename) {
+    if (!filename) {
       console.warn('JSONLoader: Must specify file name');
       return;
     }
+
+    console.log('JSONLoader: Loading',filename);
 
     this.promise = Rest.request({
       method: 'GET',
@@ -28,7 +30,8 @@ export default {
     }).then((data) => {
         _observable.notify('success', data);
       }, (err) => {
-      _observable.notify('error', err);
+        console.warn('JSON Loading error:', err);
+        _observable.notify('error', err);
       }
     );
   }

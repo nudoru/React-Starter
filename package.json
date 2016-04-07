@@ -1,12 +1,11 @@
 {
   "name": "react-starter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A React application starter",
+  "main": "server.js",
   "scripts": {
-    "start" : "node server",
-//    "dev": "webpack-dev-server --config webpack.config.js --hot --inline --progress --colors",
-//    "build": "webpack --config webpack.config.prod.js -p --progress --profile --colors",
+    "start": "node server",
+    "build": "rimraf ./www/build && set NODE_ENV=production && webpack --config ./webpack.config.prod.js --progress --profile --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +18,10 @@
     "url": "https://github.com/nudoru/React-Starter/issues"
   },
   "homepage": "https://github.com/nudoru/React-Starter#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "path": "^0.12.7"
+  },
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
     "babel-core": "^6.2.1",
@@ -51,6 +54,7 @@
     "react-router": "^1.0.0",
     "redux": "^3.0.4",
     "redux-devtools": "^2.1.5",
+    "rimraf": "^2.5.2",
     "rx": "^4.0.7",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
@@ -58,9 +62,5 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
-  },
-  "dependencies": {
-    "express": "^4.13.4",
-    "path": "^0.12.7"
   }
 }
