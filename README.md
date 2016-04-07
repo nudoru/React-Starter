@@ -20,6 +20,10 @@ A tweaked version of the [Skeleton CSS framework](http://getskeleton.com) is use
 
 Entry point for SASS is `app/sass/app/app.sass`. SASS and CSS are required in the main application JSX file at `app/scripts/app/App.js`.
 
+### Prototyping
+
+For quick prototyping, the [Material UI](http://www.material-ui.com/#/) components are installed.
+
 ## App Entry Point
 
 `index.js` > `App.js` > Routes > `AppShell.js` > Current route view
