@@ -58,5 +58,8 @@
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.13.4",
+    "path": "^0.12.7"
+  }
 }
