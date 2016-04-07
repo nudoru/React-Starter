@@ -73,5 +73,12 @@ module.exports = {
     quiet        : false,
     failOnWarning: false,
     failOnError  : false
-  }
+  },
+  plugins        : [
+    new Webpack.optimize.OccurenceOrderPlugin(),
+    new Webpack.optimize.DedupePlugin(),
+    new Webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    })
+  ]
 };

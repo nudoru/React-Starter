@@ -39,7 +39,7 @@ module.exports = function () {
 
     // The rest is terminal configurations
     quiet : false,
-    noInfo: true,
+    noInfo: false,
     stats : {
       colors: true
     }

@@ -16,7 +16,7 @@ module.exports = {
   output: {
     path      : buildPath,
     filename  : "app.js",
-    publicPath: '/build/'
+    publicPath: 'build/'
   },
 
   module         : {
@@ -86,5 +86,12 @@ module.exports = {
     failOnWarning: false,
     failOnError  : false
   },
-  plugins        : [new Webpack.HotModuleReplacementPlugin()]
+  plugins        : [
+    new Webpack.optimize.OccurenceOrderPlugin(),
+    new Webpack.HotModuleReplacementPlugin(),
+    new Webpack.NoErrorsPlugin(),
+    new Webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development')
+    })
+  ]
 };
