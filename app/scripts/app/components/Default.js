@@ -9,9 +9,9 @@ export default class Index extends React.Component {
   render() {
     return (
       <div className="app__column">
-        <h1>Welcome to the app!</h1>
+        <h1>Application</h1>
         <Lorem count="2"/>
-        <Lorem mode="list"/>
+        <Lorem mode="list" count="2"/>
       </div>
     );
   }

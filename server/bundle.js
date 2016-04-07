@@ -1,9 +1,11 @@
+// Reference http://www.christianalfoni.com/articles/2015_04_19_The-ultimate-webpack-setup
+
 var Webpack          = require('webpack'),
     WebpackDevServer = require('webpack-dev-server'),
     webpackConfig    = require('./../webpack.config.js'),
     path             = require('path'),
     fs               = require('fs'),
-    mainPath         = path.resolve(__dirname, '..', 'app', 'main.js');
+    mainPath         = path.resolve(__dirname, 'app', 'scripts', 'index.js');
 
 module.exports = function () {
 
