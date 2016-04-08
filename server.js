@@ -6,8 +6,12 @@ var express      = require('express'),
     proxy        = httpProxy.createProxyServer(),
     app          = express(),
     isProduction = process.env.NODE_ENV === 'production',
-    port         = isProduction ? process.env.PORT : 3000,
-    publicPath   = path.resolve(__dirname, 'www');
+    publicPath   = path.resolve(__dirname, 'www'),
+    ipAddress, port;
+
+ipAddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+port      = process.env.OPENSHIFT_NODEJS_PORT || (isProduction ? process.env.PORT : 3000);
+//port         = isProduction ? process.env.PORT : 3000,
 
 app.use(express.static(publicPath));
 
@@ -37,6 +41,6 @@ proxy.on('error', function (e) {
   console.log('Could not connect to proxy, please try again...');
 });
 
-app.listen(port, function () {
-  console.log('Server running on port ' + port);
+app.listen(port, ipAddress, function () {
+  console.log('Server running', Date(Date.now()), ipAddress, port);
 });
