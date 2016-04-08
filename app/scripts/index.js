@@ -32,4 +32,5 @@ if (typeof Object.assign !== 'function') {
 require('es6-promise').polyfill();
 
 // Start the app
-ReactDOM.render(<App config="config.json"/>, document.querySelector('#application'));
+// ReactDOM.render(<App config="config.json"/>, document.querySelector('#application'));
+ReactDOM.render(<App/>, document.querySelector('#application'));
