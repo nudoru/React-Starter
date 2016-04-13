@@ -8,8 +8,8 @@
 import React from 'react';
 import AppStore from './stores/AppStore';
 import Actions from './actions/actionCreators.js';
-import CoverMesage from './components/CoverMessage.js';
-import Routes from './config/routes';
+import CoverMessage from './components/CoverMessage.js';
+import Default from './components/Default';
 import JSONLoader from '../nori/service/JSONLoader.js';
 
 // Global App Styles
@@ -47,15 +47,15 @@ export default class AppContainer extends React.Component {
   render() {
     // If we're in a loading or error state ...
     if (this.state.loading) {
-      return <CoverMesage heading='Please Wait' spinner='true'/>;
+      return <CoverMessage heading='Please Wait' spinner='true'/>;
     } else if (this.state.isError) {
-      return <CoverMesage heading='Problem loading application'/>;
+      return <CoverMessage heading='Problem loading application'/>;
     }
 
-    // AppShell component will wrap the content from the components attached
-    // at the route endpoints
-    // Default view is components/Default.js
-    return Routes();
+    // Return the default view
+    return <section id="contents">
+      <Default />
+    </section>;
   }
 
 }
