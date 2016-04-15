@@ -37,7 +37,7 @@ class Default extends React.Component {
           <div style={styles.container}>
             <Paper zDepth={5}>
               <div style={styles.contentContainer}>
-                <h1>Welcome to the app! ~</h1>
+                <h1>Welcome to the app!</h1>
                 <Lorem />
                 <h5>Some buttons showing theme colors</h5>
                 <div>

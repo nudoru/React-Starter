@@ -11,7 +11,6 @@ var express      = require('express'),
 
 ipAddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 port      = process.env.OPENSHIFT_NODEJS_PORT || (isProduction ? process.env.PORT : 3000);
-//port         = isProduction ? process.env.PORT : 3000,
 
 app.use(express.static(publicPath));
 
@@ -41,6 +40,9 @@ proxy.on('error', function (e) {
   console.log('Could not connect to proxy, please try again...');
 });
 
-app.listen(port, ipAddress, function () {
-  console.log('Server running', Date(Date.now()), ipAddress, port);
+app.listen(port, ipAddress, function onStart(err) {
+  if (err) {
+    console.log(err);
+  }
+  console.log('Server running at http://'+ipAddress+':'+port);
 });
