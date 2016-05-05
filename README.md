@@ -31,3 +31,6 @@ By default, the `App.js` will load the `www/config.json` file on start up. This 
 # Docker
 
 `docker build -t nudoru/react-starter .`
+`docker run -it -p 8080:3000 react-starter`
+`docker run -i -t -p 8080:3000 -v `pwd`app:/usr/src/app/app -v `pwd`www:/usr/src/app/www react-starter`
+`http://192.168.99.100:8080`

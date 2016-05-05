@@ -40,7 +40,8 @@ proxy.on('error', function (e) {
   console.log('Could not connect to proxy, please try again...');
 });
 
-app.listen(port, ipAddress, function onStart(err) {
+//ipAddress,
+app.listen(port, function onStart(err) {
   if (err) {
     console.log(err);
   }
