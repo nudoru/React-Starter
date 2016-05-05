@@ -6,7 +6,7 @@ var express      = require('express'),
     proxy        = httpProxy.createProxyServer(),
     app          = express(),
     isProduction = process.env.NODE_ENV === 'production',
-    publicPath   = path.resolve(__dirname, 'www'),
+    publicPath   = path.resolve(__dirname, '..', 'front', 'www'),
     ipAddress, port;
 
 ipAddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
@@ -20,7 +20,7 @@ if (!isProduction) {
   // We require the bundler inside the if block because
   // it is only needed in a development environment. Later
   // you will see why this is a good idea
-  var bundle = require('./server/bundle.js');
+  var bundle = require('./bundle.js');
   bundle();
 
   // Any requests to localhost:3000/build is proxied

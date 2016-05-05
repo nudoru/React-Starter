@@ -4,6 +4,8 @@ Base starting point for my React projects.
 
 Includes an Express server with the structure based on http://www.christianalfoni.com/articles/2015_04_19_The-ultimate-webpack-setup
 
+Front-end code is located in the 'front' folder. Back-end code in the `back` folder.
+
 ## WebPack loaders
 
 - SASS

@@ -1,8 +1,8 @@
 var Webpack         = require('webpack'),
     path            = require("path"),
     nodeModulesPath = path.resolve(__dirname, 'node_modules'),
-    buildPath       = path.resolve(__dirname, 'www', 'build'),
-    mainPath        = path.resolve(__dirname, 'app', 'scripts', 'index.js');
+    buildPath       = path.resolve(__dirname, 'front', 'www', 'build'),
+    mainPath        = path.resolve(__dirname, 'front', 'app', 'scripts', 'index.js');
 
 module.exports = {
 
@@ -19,7 +19,7 @@ module.exports = {
     publicPath: '/build/'
   },
 
-  module         : {
+  module    : {
     preLoaders: [
       {
         test   : /\.js$/,
@@ -66,7 +66,7 @@ module.exports = {
       }
     ]
   },
-  sassLoader     : {
+  sassLoader: {
     indentedSyntax: true
     // includePaths: [path.resolve(__dirname, "./app/sass/base"),
     //   path.resolve(__dirname, "./app/sass/components"),
@@ -80,13 +80,13 @@ module.exports = {
   // 'uglify-loader': {
   //   mangle: false
   // },
-  eslint         : {
+  eslint    : {
     configFile   : './.eslintrc',
     quiet        : false,
     failOnWarning: false,
     failOnError  : false
   },
-  plugins        : [
+  plugins   : [
     new Webpack.optimize.OccurenceOrderPlugin(),
     new Webpack.HotModuleReplacementPlugin(),
     new Webpack.NoErrorsPlugin(),

@@ -4,9 +4,9 @@
   "description": "A React application starter",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
-    "clean": "rimraf ./www/build/ && set NODE_ENV=development",
-    "build": "rimraf ./www/build/ && set NODE_ENV=production && webpack -p --config webpack.config.prod.js --progress --profile --colors",
+    "start": "node server/server",
+    "clean": "rimraf ./front/www/build/ && set NODE_ENV=development",
+    "build": "rimraf ./front/www/build/ && set NODE_ENV=production && webpack -p --config webpack.config.prod.js --progress --profile --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
