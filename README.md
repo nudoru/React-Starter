@@ -20,14 +20,14 @@ A tweaked version of the [Skeleton CSS framework](http://getskeleton.com) is use
 
 Entry point for SASS is `app/sass/app/app.sass`. SASS and CSS are required in the main application JSX file at `app/scripts/app/App.js`.
 
-### Prototyping
-
-For quick prototyping, the [Material UI](http://www.material-ui.com/#/) components are installed.
-
 ## App Entry Point
 
 `index.js` > `App.js` > `Default.js`
 
-The entry point for the app is `app/scripts/index.js`. This file sets up a polypill for promise support in IE 11 and then attaches `app/scripts/app/App.js` to the DOM in the `#appliation` div.
+The entry point for the app is `app/scripts/index.js`. This file sets up a polyfill for promise support in IE 11 and then attaches `app/scripts/app/App.js` to the DOM in the `#appliation` div.
 
 By default, the `App.js` will load the `www/config.json` file on start up. This external config file may be updated outside of the bundle to set configuration options for the application. The `render()` function will return a loading, error or the view from `components/Default.js`.
+
+# Docker
+
+`docker build -t nudoru/react-starter .`
