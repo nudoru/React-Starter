@@ -16,6 +16,7 @@ coverage
 build/Release
 
 # Dependency directory
+bak-node_modules
 node_modules
 
 # Others

@@ -1,0 +1,12 @@
+version: "2"
+services:
+  web:
+      build: .
+      expose:
+      - "3000"
+      ports:
+      - "8080:3000"
+      volumes:
+      - ./front:/usr/src/app/front:rw
+      environment:
+      - NODE_ENV=dev
