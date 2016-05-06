@@ -4,7 +4,7 @@ Base starting point for my React projects.
 
 Includes an Express server with the structure based on http://www.christianalfoni.com/articles/2015_04_19_The-ultimate-webpack-setup
 
-Front-end code is located in the 'front' folder. Back-end code in the `back` folder.
+Front-end code is located in the 'front' folder.
 
 ## WebPack loaders
 
@@ -32,7 +32,7 @@ By default, the `App.js` will load the `www/config.json` file on start up. This 
 
 # Docker
 
-`docker build -t nudoru/react-starter .`
+`docker build -t react-starter .`
 `docker run -it -p 8080:3000 react-starter`
-`docker run -i -t -p 8080:3000 -v `pwd`app:/usr/src/app/app -v `pwd`www:/usr/src/app/www react-starter`
+`docker run -it -p 8080:3000 -v `pwd`/front:/usr/src/app/front react-starter`
 `http://192.168.99.100:8080`

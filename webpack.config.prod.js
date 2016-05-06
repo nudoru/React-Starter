@@ -78,7 +78,9 @@ module.exports = {
     new Webpack.optimize.OccurenceOrderPlugin(),
     new Webpack.optimize.DedupePlugin(),
     new Webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
     })
   ]
 };
