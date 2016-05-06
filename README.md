@@ -32,7 +32,17 @@ By default, the `App.js` will load the `www/config.json` file on start up. This 
 
 # Docker
 
+## Build
+
+Any changes to the server or webpack configurations will require rebuilding the container:
+
 `docker build -t react-starter .`
-`docker run -it -p 8080:3000 react-starter`
+
+## Running
+
+We're mapping the local `front` source directort to the container's directory so that updates are caught by Webpack and the hot reloader.
+
 `docker run -it -p 8080:3000 -v `pwd`/front:/usr/src/app/front react-starter`
 `http://192.168.99.100:8080`
+
+`docker run -it -p 8080:3000 react-starter`

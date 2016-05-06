@@ -7,9 +7,10 @@ var Webpack         = require('webpack'),
 module.exports = {
 
   devtool: 'eval',
+  // This is set to the Docker machine IP
   entry  : [
+    'webpack-dev-server/client?http://192.168.99.100:8080',
     'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:8080',
     mainPath
   ],
 
